@@ -38,7 +38,11 @@ class FriendCard extends React.Component {
                 <p>{this.state.myGithub.bio}</p>
             <div className="followers">
                 <p>My Followers:</p>
-                <p>{this.state.followers.login}</p>
+                {this.state.followers.map((item) => {
+                    return (
+                        <img src={item.avatar_url} />
+                    )
+                })}
                 
             </div>
             </div>
