@@ -32,12 +32,12 @@ class FriendCard extends React.Component {
 
     render() {
         return (
-            <div className="friend-card">
+            <div className="my-info">
                 <h1>{this.state.myGithub.name}</h1>
                 <h2>{this.state.myGithub.location}</h2>
-                <p>{this.state.myGithub.bio}</p>
+                <p className="bio">{this.state.myGithub.bio}</p>
+                <p className="my-followers">My Followers:</p>
             <div className="followers">
-                <p>My Followers:</p>
                 {this.state.followers.map((item) => {
                     return (
                         <img src={item.avatar_url} />
